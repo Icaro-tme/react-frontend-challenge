@@ -1,111 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  color-scheme: light;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+html.dark {
+  color-scheme: dark;
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 body {
   margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f5f3ea;
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(250, 204, 21, 0.05) 0px,
+      rgba(250, 204, 21, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(250, 204, 21, 0.05) 11px,
+      rgba(250, 204, 21, 0.05) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(90deg,
+      rgba(14, 116, 144, 0.05) 0px,
+      rgba(14, 116, 144, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(14, 116, 144, 0.05) 11px,
+      rgba(14, 116, 144, 0.05) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(0deg,
+      rgba(250, 204, 21, 0.04) 0px,
+      rgba(250, 204, 21, 0.04) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(250, 204, 21, 0.04) 11px,
+      rgba(250, 204, 21, 0.04) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(135deg,
+      rgba(14, 116, 144, 0.05) 0px,
+      rgba(14, 116, 144, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(14, 116, 144, 0.05) 11px,
+      rgba(14, 116, 144, 0.05) 12px,
+      transparent 12px,
+      transparent 32px),
+    linear-gradient(160deg, #f6f3e5 0%, #ddd9ec 56%, #d2e5ef 100%);
+  color: #1f2937;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body {
+  background-color: #020617;
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(20, 83, 45, 0.12) 0px,
+      rgba(20, 83, 45, 0.12) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(20, 83, 45, 0.12) 11px,
+      rgba(20, 83, 45, 0.12) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(90deg,
+      rgba(30, 64, 175, 0.12) 0px,
+      rgba(30, 64, 175, 0.12) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(30, 64, 175, 0.12) 11px,
+      rgba(30, 64, 175, 0.12) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(0deg,
+      rgba(20, 83, 45, 0.1) 0px,
+      rgba(20, 83, 45, 0.1) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(20, 83, 45, 0.1) 11px,
+      rgba(20, 83, 45, 0.1) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(135deg,
+      rgba(30, 64, 175, 0.1) 0px,
+      rgba(30, 64, 175, 0.1) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(30, 64, 175, 0.1) 11px,
+      rgba(30, 64, 175, 0.1) 12px,
+      transparent 12px,
+      transparent 32px),
+    linear-gradient(150deg, #020617 0%, #111827 50%, #0f172a 100%);
+  color: #e2e8f0;
 }
 
 h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+h2,
+h3 {
+  font-family: 'Sora', sans-serif;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+/* .teste {
+  background-image: 
+  repeating-linear-gradient(45deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  repeating-linear-gradient(90deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  repeating-linear-gradient(0deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  repeating-linear-gradient(135deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  linear-gradient(90deg, rgb(41, 27, 158), rgb(249, 77, 212));
+} */
