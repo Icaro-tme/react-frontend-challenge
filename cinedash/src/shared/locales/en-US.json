@@ -1,0 +1,54 @@
+{
+  "login": {
+    "seloAcesso": "Curation access",
+    "titulo": "Sign in to CineDash",
+    "descricao": "Type your email to validate local access. If no user exists, you will be sent to sign up.",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "you@company.com",
+    "botaoEntrar": "Sign in",
+    "cadastrarUsuario": "No account yet? Create one",
+    "statusEmail": {
+      "invalido": "Enter a valid email to start checking.",
+      "verificando": "Checking authentication...",
+      "encontrado": "Email found. You can sign in now.",
+      "naoEncontrado": "Email not found. On submit, you will be redirected to sign up."
+    }
+  },
+  "cadastro": {
+    "seloAcesso": "New account",
+    "titulo": "Create account",
+    "descricao": "Register email, name and profile to generate a session.",
+    "nomeRotulo": "Name",
+    "nomePlaceholder": "Full name",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "you@company.com",
+    "perfilRotulo": "Profile",
+    "botaoCadastrar": "Register and sign in",
+    "voltarLogin": "I already have an account",
+    "erroEmailExistente": "This email already exists. Please use login."
+  },
+  "perfis": {
+    "administrador": "Administrator",
+    "operador": "Operator"
+  },
+  "painel": {
+    "tituloEmConstrucao": "Authenticated area under construction",
+    "loginRealizadoPara": "Login completed for"
+  },
+  "acoes": {
+    "sair": "Logout",
+    "fechar": "Close",
+    "erroGenerico": "Something went wrong. Please try again."
+  },
+  "rodape": {
+    "assinatura": "@2026 By Icaro Araújo",
+    "contato": "Contact",
+    "idioma": "Language",
+    "alternarTemaEscuro": "Enable dark theme",
+    "alternarTemaClaro": "Enable light theme"
+  },
+  "naoEncontrado": {
+    "titulo": "Page not found",
+    "descricao": "Return to a valid language route to continue."
+  }
+}

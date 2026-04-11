@@ -1,0 +1,54 @@
+{
+  "login": {
+    "seloAcesso": "Acesso de curadoria",
+    "titulo": "Entrar no CineDash",
+    "descricao": "Digite seu email para validar acesso local. Caso não exista usuário cadastrado, você será redirecionado.",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "voce@empresa.com",
+    "botaoEntrar": "Entrar",
+    "cadastrarUsuario": "Não possui login? Criar cadastro",
+    "statusEmail": {
+      "invalido": "Digite um email válido.",
+      "verificando": "Consultando autenticação...",
+      "encontrado": "Email encontrado.",
+      "naoEncontrado": "Email não encontrado. Você será redirecionado para cadastro."
+    }
+  },
+  "cadastro": {
+    "seloAcesso": "Novo acesso",
+    "titulo": "Criar cadastro",
+    "descricao": "Cadastre email, nome e perfil para gerar sessão.",
+    "nomeRotulo": "Nome",
+    "nomePlaceholder": "Nome completo",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "voce@empresa.com",
+    "perfilRotulo": "Perfil",
+    "botaoCadastrar": "Cadastrar e entrar",
+    "voltarLogin": "Já tenho cadastro",
+    "erroEmailExistente": "Email já cadastrado. Use a tela de login."
+  },
+  "perfis": {
+    "administrador": "Administrador",
+    "operador": "Operador"
+  },
+  "painel": {
+    "tituloEmConstrucao": "Área autenticada em construção",
+    "loginRealizadoPara": "Login realizado para"
+  },
+  "acoes": {
+    "sair": "Sair",
+    "fechar": "Fechar",
+    "erroGenerico": "Algo deu errado. Tente novamente."
+  },
+  "rodape": {
+    "assinatura": "@2026 By Icaro Araújo",
+    "contato": "Contato",
+    "idioma": "Idioma",
+    "alternarTemaEscuro": "Ativar tema escuro",
+    "alternarTemaClaro": "Ativar tema claro"
+  },
+  "naoEncontrado": {
+    "titulo": "Página não encontrada",
+    "descricao": "Volte para uma rota válida de idioma para continuar."
+  }
+}
