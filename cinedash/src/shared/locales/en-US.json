@@ -5,6 +5,8 @@
     "descricao": "Type your email to validate local access. If no user exists, you will be sent to sign up.",
     "emailRotulo": "Email",
     "emailPlaceholder": "you@company.com",
+    "senhaRotulo": "Password",
+    "senhaPlaceholder": "Type your password",
     "botaoEntrar": "Sign in",
     "cadastrarUsuario": "No account yet? Create one",
     "statusEmail": {
@@ -33,7 +35,16 @@
   },
   "painel": {
     "tituloEmConstrucao": "Authenticated area under construction",
-    "loginRealizadoPara": "Login completed for"
+    "loginRealizadoPara": "Login completed for",
+    "perfilAtual": "Current role",
+    "podeExportar": "Export permission",
+    "sim": "yes",
+    "nao": "no"
+  },
+  "validacao": {
+    "emailInvalido": "Enter a valid email.",
+    "senhaMinima": "Password must have more than 6 characters.",
+    "nomeMinimo": "Name must have at least 2 characters."
   },
   "acoes": {
     "sair": "Logout",

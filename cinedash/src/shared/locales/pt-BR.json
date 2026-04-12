@@ -5,6 +5,8 @@
     "descricao": "Digite seu email para validar acesso local. Caso não exista usuário cadastrado, você será redirecionado.",
     "emailRotulo": "Email",
     "emailPlaceholder": "voce@empresa.com",
+    "senhaRotulo": "Senha",
+    "senhaPlaceholder": "Digite sua senha",
     "botaoEntrar": "Entrar",
     "cadastrarUsuario": "Não possui login? Criar cadastro",
     "statusEmail": {
@@ -33,7 +35,16 @@
   },
   "painel": {
     "tituloEmConstrucao": "Área autenticada em construção",
-    "loginRealizadoPara": "Login realizado para"
+    "loginRealizadoPara": "Login realizado para",
+    "perfilAtual": "Perfil atual",
+    "podeExportar": "Permissão de exportação",
+    "sim": "sim",
+    "nao": "não"
+  },
+  "validacao": {
+    "emailInvalido": "Digite um email válido.",
+    "senhaMinima": "A senha precisa ter mais de 6 caracteres.",
+    "nomeMinimo": "Informe pelo menos 2 caracteres no nome."
   },
   "acoes": {
     "sair": "Sair",
