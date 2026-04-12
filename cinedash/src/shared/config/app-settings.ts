@@ -8,6 +8,14 @@ export const appSettings = {
     tempoDebounceEmailMs: 350,
     tempoDelayMockMs: 350,
   },
+  filmes: {
+    tempoDebounceFiltrosMs: 300,
+    tamanhoPaginaLocal: 20,
+    anoLancamentoMinimo: 1800,
+    anoLancamentoMaximo: 2200,
+    notaMinimaPermitida: 0,
+    notaMaximaPermitida: 10,
+  },
   query: {
     staleTimeMs: 60_000,
     gcTimeMs: 10 * 60_000,

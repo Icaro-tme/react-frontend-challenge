@@ -1,0 +1,33 @@
+export { getTmdbConfig } from './tmdb.config'
+export { createTmdbGetClient } from './tmdb.client'
+export { createTmdbService, tmdbService } from './tmdb.service'
+export type {
+  BuscarClassificacoesFilmeParams,
+  BuscarDetalhesFilmeParams,
+  BuscarFilmesBuscaParams,
+  BuscarFilmesDescobertaParams,
+  BuscarFilmesPopularesParams,
+  BuscarFilmesTopRatedParams,
+  BuscarFilmesTendenciaParams,
+  BuscarFilmesUpcomingParams,
+  BuscarGenerosFilmeParams,
+  ConfiguracaoTmdb,
+  JanelaTendencia,
+  MovieDetailsAppendItem,
+  OrdenacaoDescoberta,
+  QueryParametros,
+  TmdbGenreDto,
+  TmdbGenreListResponse,
+  TmdbMovieCastDto,
+  TmdbMovieCreditsResponse,
+  TmdbMovieCrewDto,
+  TmdbMovieDetailsResponse,
+  TmdbMovieDto,
+  TmdbMovieListResponse,
+  TmdbMovieReleaseDateByCountryDto,
+  TmdbMovieReleaseDateDto,
+  TmdbMovieReleaseDatesResponse,
+  TmdbMovieVideoDto,
+  TmdbMovieVideosResponse,
+  TmdbClientDependencias,
+} from './tmdb.types'
