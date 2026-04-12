@@ -1,5 +1,4 @@
 export {
-  SUPPORTED_LOCALES,
   SUPPORTED_ROUTE_LANGUAGES,
 } from './language.constants'
 export {
