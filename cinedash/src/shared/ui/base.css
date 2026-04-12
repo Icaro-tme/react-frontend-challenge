@@ -1,0 +1,12 @@
+@tailwind base;
+
+@layer base {
+  label {
+    @apply block text-left text-sm font-medium text-slate-800 dark:text-slate-100;
+  }
+
+  input,
+  select {
+    @apply mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none transition dark:border-slate-600 dark:bg-slate-950 dark:text-slate-100;
+  }
+}
