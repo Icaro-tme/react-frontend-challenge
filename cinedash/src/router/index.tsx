@@ -2,14 +2,12 @@ import {
   createRootRoute,
   createRoute,
   createRouter,
+  lazyRouteComponent,
   redirect,
 } from '@tanstack/react-router'
 import { useAuthStore } from '../features/auth/model/auth.store'
 import { getPreferredRouteLanguage } from '../features/locale/model/locale.store'
-import { DashboardPage } from '../pages/dashboard-page'
-import { LoginPage } from '../pages/login-page'
 import { NotFoundPage } from '../pages/not-found-page'
-import { SignupPage } from '../pages/signup-page'
 import type { RouteLanguage } from '../shared/config/language'
 import {
   redirectFromLanguageIndex,
@@ -22,6 +20,35 @@ import { RootLayout } from './root-layout'
 function getRouteLanguageParam(params: { lang: string }): RouteLanguage {
   return params.lang as RouteLanguage
 }
+
+const loginPageComponent = lazyRouteComponent(
+  () => import('../pages/login-page'),
+  'LoginPage',
+)
+const signupPageComponent = lazyRouteComponent(
+  () => import('../pages/signup-page'),
+  'SignupPage',
+)
+const sessionRequiredPageComponent = lazyRouteComponent(
+  () => import('../pages/session-required-page'),
+  'SessionRequiredPage',
+)
+const dashboardPageComponent = lazyRouteComponent(
+  () => import('../pages/dashboard-page'),
+  'DashboardPage',
+)
+const setlistPageComponent = lazyRouteComponent(
+  () => import('../pages/setlist-page'),
+  'SetlistPage',
+)
+const watchlistPageComponent = lazyRouteComponent(
+  () => import('../pages/watchlist-page'),
+  'WatchlistPage',
+)
+const movieDetailsPageComponent = lazyRouteComponent(
+  () => import('../pages/movie-details-page'),
+  'MovieDetailsPage',
+)
 
 const rootRoute = createRootRoute({
   component: RootLayout,
@@ -50,7 +77,6 @@ const languageRoute = createRoute({
   beforeLoad: async ({ params }) => {
     await validateAndSyncRouteLanguage(params.lang)
   },
-  component: RootLayout,
 })
 
 const languageIndexRoute = createRoute({
@@ -71,7 +97,7 @@ const loginRoute = createRoute({
 
     redirectIfLogged(routeLanguage)
   },
-  component: LoginPage,
+  component: loginPageComponent,
 })
 
 const signupRoute = createRoute({
@@ -82,7 +108,18 @@ const signupRoute = createRoute({
 
     redirectIfLogged(routeLanguage)
   },
-  component: SignupPage,
+  component: signupPageComponent,
+})
+
+const sessionRequiredRoute = createRoute({
+  getParentRoute: () => languageRoute,
+  path: 'session-required',
+  beforeLoad: ({ params }) => {
+    const routeLanguage = getRouteLanguageParam(params)
+
+    redirectIfLogged(routeLanguage)
+  },
+  component: sessionRequiredPageComponent,
 })
 
 const dashboardRoute = createRoute({
@@ -93,7 +130,40 @@ const dashboardRoute = createRoute({
 
     requireLogged(routeLanguage)
   },
-  component: DashboardPage,
+  component: dashboardPageComponent,
+})
+
+const setlistRoute = createRoute({
+  getParentRoute: () => languageRoute,
+  path: 'setlist',
+  beforeLoad: ({ params }) => {
+    const routeLanguage = getRouteLanguageParam(params)
+
+    requireLogged(routeLanguage)
+  },
+  component: setlistPageComponent,
+})
+
+const watchlistRoute = createRoute({
+  getParentRoute: () => languageRoute,
+  path: 'watchlist',
+  beforeLoad: ({ params }) => {
+    const routeLanguage = getRouteLanguageParam(params)
+
+    requireLogged(routeLanguage)
+  },
+  component: watchlistPageComponent,
+})
+
+const movieDetailsRoute = createRoute({
+  getParentRoute: () => languageRoute,
+  path: 'movie/$movieId',
+  beforeLoad: ({ params }) => {
+    const routeLanguage = getRouteLanguageParam(params)
+
+    requireLogged(routeLanguage)
+  },
+  component: movieDetailsPageComponent,
 })
 
 const routeTree = rootRoute.addChildren([
@@ -102,7 +172,11 @@ const routeTree = rootRoute.addChildren([
     languageIndexRoute,
     loginRoute,
     signupRoute,
+    sessionRequiredRoute,
     dashboardRoute,
+    setlistRoute,
+    watchlistRoute,
+    movieDetailsRoute,
   ]),
 ])
 

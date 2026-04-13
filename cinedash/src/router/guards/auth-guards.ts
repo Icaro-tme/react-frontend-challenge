@@ -25,7 +25,7 @@ export function requireLogged(routeLanguage: RouteLanguage): void {
   }
 
   throw redirect({
-    to: '/$lang/login',
+    to: '/$lang/session-required',
     params: {
       lang: routeLanguage,
     },

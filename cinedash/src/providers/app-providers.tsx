@@ -1,5 +1,6 @@
 import { QueryClientProvider } from '@tanstack/react-query'
 import { type ReactNode } from 'react'
+import { ToastProvider } from '../shared/ui/toast/toast-provider'
 import { queryClient } from './query-client'
 import { ThemeSyncProvider } from './theme-sync-provider'
 
@@ -10,7 +11,9 @@ interface AppProvidersProps {
 export function AppProviders({ children }: AppProvidersProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeSyncProvider>{children}</ThemeSyncProvider>
+      <ThemeSyncProvider>
+        <ToastProvider>{children}</ToastProvider>
+      </ThemeSyncProvider>
     </QueryClientProvider>
   )
 }
