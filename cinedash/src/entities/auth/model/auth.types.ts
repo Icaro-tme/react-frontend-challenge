@@ -1,11 +1,7 @@
 import type { PerfilAuth } from './auth.enums'
+import type { Usuario } from '../../user/model/user.types'
 
-export interface UsuarioAuth {
-  id: string
-  email: string
-  nome: string
-  perfil: PerfilAuth
-}
+export type UsuarioAuth = Usuario
 
 export interface SessaoAuth {
   token: string

@@ -11,6 +11,7 @@ import type {
   UsuarioAuth,
 } from '../../../entities/auth/model/auth.types'
 import { appSettings } from '../../../shared/config/app-settings'
+import { notifyAuthSessionChanged } from '../../../shared/lib/auth-session'
 
 interface EstadoAuth {
   sessao: SessaoAuth | null
@@ -110,6 +111,8 @@ export const useAuthStore = create<EstadoAuth>()(
           },
         })
 
+        notifyAuthSessionChanged()
+
         return usuarioEncontrado
       },
       signOut: () => {
@@ -117,6 +120,8 @@ export const useAuthStore = create<EstadoAuth>()(
           sessao: null,
           usuarioLogado: null,
         })
+
+        notifyAuthSessionChanged()
       },
       isLogged: () => {
         const sessaoAtual = get().sessao
@@ -127,6 +132,8 @@ export const useAuthStore = create<EstadoAuth>()(
               sessao: null,
               usuarioLogado: null,
             })
+
+            notifyAuthSessionChanged()
           }
 
           return false

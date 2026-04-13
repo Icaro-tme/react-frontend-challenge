@@ -1,18 +1,20 @@
 import { useTranslation } from 'react-i18next'
-import { useLanguageSwitcher } from '../../locale/hooks/use-language-switcher'
-import type { ThemeMode } from '../../theme/model/theme.store'
+import type { RouteLanguage } from '../../../shared/config/language'
 
 interface AuthFooterProps {
-  theme: ThemeMode
+  theme: 'light' | 'dark'
   onToggleTheme: () => void
+  routeLanguage: RouteLanguage
+  onToggleLanguage: () => void | Promise<void>
 }
 
 export function AuthFooter({
   theme,
   onToggleTheme,
+  routeLanguage,
+  onToggleLanguage,
 }: AuthFooterProps) {
   const { t } = useTranslation()
-  const { routeLanguage, toggleLanguage } = useLanguageSwitcher()
 
   return (
     <footer className="surface-footer">
@@ -34,7 +36,7 @@ export function AuthFooter({
         <button
           type="button"
           onClick={() => {
-            void toggleLanguage()
+            void onToggleLanguage()
           }}
           className="btn-chip btn-chip--cyan"
         >
