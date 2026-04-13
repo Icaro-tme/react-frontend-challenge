@@ -11,8 +11,10 @@ import {
 } from '../features/auth/model/auth.schemas'
 import { AuthFooter } from '../features/auth/ui/auth-footer'
 import { SignupCard } from '../features/auth/ui/signup-card'
+import { useLanguageSwitcher } from '../features/locale/hooks/use-language-switcher'
 import { useThemeStore } from '../features/theme/model/theme.store'
 import type { RouteLanguage } from '../shared/config/language'
+import { useToast } from '../shared/ui/toast/use-toast'
 
 export function SignupPage() {
   const { t } = useTranslation()
@@ -21,6 +23,8 @@ export function SignupPage() {
 
   const tema = useThemeStore((state) => state.theme)
   const alternarTema = useThemeStore((state) => state.toggleTheme)
+  const { routeLanguage, toggleLanguage } = useLanguageSwitcher()
+  const { showError, showSuccess } = useToast()
 
   const schema = useMemo(() => createSignupSchema(t), [t])
 
@@ -36,22 +40,28 @@ export function SignupPage() {
   const registerMutation = useRegisterUserMutation()
 
   const onSubmit: SubmitHandler<FormularioCadastro> = async (dados) => {
-    const usuarioCriado = await registerMutation.mutateAsync(dados)
+    try {
+      const usuarioCriado = await registerMutation.mutateAsync(dados)
 
-    if (!usuarioCriado) {
-      form.setError('email', {
-        message: t('cadastro.erroEmailExistente'),
+      if (!usuarioCriado) {
+        form.setError('email', {
+          message: t('cadastro.erroEmailExistente'),
+        })
+
+        return
+      }
+
+      showSuccess(t('cadastro.notificacoes.cadastroSucesso'))
+
+      await navigate({
+        to: '/$lang/dashboard',
+        params: {
+          lang,
+        },
       })
-
-      return
+    } catch {
+      showError(t('cadastro.notificacoes.erroCadastro'))
     }
-
-    await navigate({
-      to: '/$lang/dashboard',
-      params: {
-        lang,
-      },
-    })
   }
 
   return (
@@ -71,7 +81,12 @@ export function SignupPage() {
           }}
         />
 
-        <AuthFooter theme={tema} onToggleTheme={alternarTema} />
+        <AuthFooter
+          theme={tema}
+          onToggleTheme={alternarTema}
+          routeLanguage={routeLanguage}
+          onToggleLanguage={toggleLanguage}
+        />
       </div>
     </main>
   )

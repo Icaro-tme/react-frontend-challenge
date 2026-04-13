@@ -13,10 +13,12 @@ import {
 } from '../features/auth/model/auth.schemas'
 import { AuthFooter } from '../features/auth/ui/auth-footer'
 import { LoginCard } from '../features/auth/ui/login-card'
+import { useLanguageSwitcher } from '../features/locale/hooks/use-language-switcher'
 import { useThemeStore } from '../features/theme/model/theme.store'
 import { appSettings } from '../shared/config/app-settings'
 import type { RouteLanguage } from '../shared/config/language'
 import { useDebouncedValue } from '../shared/hooks/use-debounced-value'
+import { useToast } from '../shared/ui/toast/use-toast'
 
 type AvailabilityTone = 'neutral' | 'success' | 'warning'
 
@@ -79,6 +81,8 @@ export function LoginPage() {
 
   const tema = useThemeStore((state) => state.theme)
   const alternarTema = useThemeStore((state) => state.toggleTheme)
+  const { routeLanguage, toggleLanguage } = useLanguageSwitcher()
+  const { showError, showInfo, showSuccess } = useToast()
 
   const schema = useMemo(() => createLoginSchema(t), [t])
 
@@ -112,25 +116,33 @@ export function LoginPage() {
   )
 
   const onSubmit: SubmitHandler<FormularioLogin> = async (dados) => {
-    const usuarioLogado = await loginMutation.mutateAsync(dados.email)
+    try {
+      const usuarioLogado = await loginMutation.mutateAsync(dados.email)
 
-    if (usuarioLogado) {
+      if (usuarioLogado) {
+        showSuccess(t('login.notificacoes.loginSucesso'))
+
+        await navigate({
+          to: '/$lang/dashboard',
+          params: {
+            lang,
+          },
+        })
+
+        return
+      }
+
+      showInfo(t('login.notificacoes.redirecionandoCadastro'))
+
       await navigate({
-        to: '/$lang/dashboard',
+        to: '/$lang/signup',
         params: {
           lang,
         },
       })
-
-      return
+    } catch {
+      showError(t('login.notificacoes.erroLogin'))
     }
-
-    await navigate({
-      to: '/$lang/signup',
-      params: {
-        lang,
-      },
-    })
   }
 
   return (
@@ -153,7 +165,12 @@ export function LoginPage() {
           }}
         />
 
-        <AuthFooter theme={tema} onToggleTheme={alternarTema} />
+        <AuthFooter
+          theme={tema}
+          onToggleTheme={alternarTema}
+          routeLanguage={routeLanguage}
+          onToggleLanguage={toggleLanguage}
+        />
       </div>
     </main>
   )
