@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../../react-frontend-challenge-feat-rotten-potatoes-impl"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
