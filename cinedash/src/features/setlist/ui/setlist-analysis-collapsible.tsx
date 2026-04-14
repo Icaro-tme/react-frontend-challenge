@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { FaChevronDown, FaListCheck } from 'react-icons/fa6'
 import type { Setlist } from '../../../entities/setlist/model/setlist.types'
 import type { RouteLanguage } from '../../../shared/config/language'
-import type { SetlistAnaliseSpoor } from '../model/setlist-analysis.types'
+import type { SetlistAnaliseScore } from '../model/setlist-analysis.types'
 
 type StatusAnaliseSetlist =
   | 'semSetlist'
@@ -16,7 +16,7 @@ interface SetlistAnalysisCollapsibleProps {
   setlists: Setlist[]
   setlistSelecionadaId: string
   onSetlistSelecionadaChange: (setlistId: string) => void
-  analiseResumo?: SetlistAnaliseSpoor | null
+  analiseResumo?: SetlistAnaliseScore | null
   isCalculandoAnalise?: boolean
   statusAnalise?: StatusAnaliseSetlist
   onCalcularAnalise?: () => void

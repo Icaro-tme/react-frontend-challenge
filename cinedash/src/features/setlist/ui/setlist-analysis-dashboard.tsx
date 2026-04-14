@@ -19,10 +19,10 @@ import {
   YAxis,
 } from 'recharts'
 import type { RouteLanguage } from '../../../shared/config/language'
-import type { SetlistAnaliseSpoor } from '../model/setlist-analysis.types'
+import type { SetlistAnaliseScore } from '../model/setlist-analysis.types'
 
 interface SetlistAnalysisDashboardProps {
-  analise: SetlistAnaliseSpoor
+  analise: SetlistAnaliseScore
   routeLanguage: RouteLanguage
 }
 
@@ -217,7 +217,7 @@ export function SetlistAnalysisDashboard({
                 cx="50%"
                 cy="50%"
                 outerRadius={100}
-                label={({ nome, percent }) => `${nome} (${(percent * 100).toFixed(0)}%)`}
+                label={({ name, percent }: { name?: string; percent?: number }) => `${name ?? ''} (${((percent ?? 0) * 100).toFixed(0)}%)`}
                 labelLine={false}
               >
                 {dadosDistribuicao.map((_, indice) => (
@@ -291,7 +291,7 @@ export function SetlistAnalysisDashboard({
                     borderRadius: 8,
                     color: '#e2e8f0',
                   }}
-                  formatter={(valor: number) => formatadorMoeda.format(valor)}
+                  formatter={(valor) => formatadorMoeda.format(Number(valor))}
                 />
                 <Bar dataKey="budget" fill={CORES_GRAFICO.secundaria} radius={[0, 4, 4, 0]} />
               </BarChart>

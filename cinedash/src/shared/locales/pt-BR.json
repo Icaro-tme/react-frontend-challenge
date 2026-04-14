@@ -275,7 +275,7 @@
       "erroCarregarFilmes": "Não foi possível carregar os filmes da setlist.",
       "abrirModalWatchlist": "Gerenciar watchlist",
       "analise": {
-        "titulo": "Análise Spoor da setlist",
+        "titulo": "Análise Score da setlist",
         "descricao": "Métricas para validar se a curadoria da setlist está competitiva para catálogo de streaming.",
         "acoes": {
           "calcular": "Calcular análise",

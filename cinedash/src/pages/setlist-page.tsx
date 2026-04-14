@@ -601,34 +601,35 @@ export function SetlistPage() {
                     return
                   }
 
+                  const dadosImportados = resultado.dados
                   const usuarioKey = getUsuarioAtualKey()
 
                   useSetlistStore.setState((estadoAtual) => ({
                     setlistsPorUsuario: {
                       ...estadoAtual.setlistsPorUsuario,
-                      [usuarioKey]: resultado.dados.setlists,
+                      [usuarioKey]: dadosImportados.setlists,
                     },
-                    setlists: resultado.dados.setlists,
+                    setlists: dadosImportados.setlists,
                   }))
 
                   useWatchlistStore.setState((estadoAtual) => ({
                     watchlistPorUsuario: {
                       ...estadoAtual.watchlistPorUsuario,
                       [usuarioKey]: {
-                        filmesWatchlistIds: resultado.dados.watchlist.filmesWatchlistIds,
-                        filmesAssistidosIds: resultado.dados.watchlist.filmesAssistidosIds,
+                        filmesWatchlistIds: dadosImportados.watchlist.filmesWatchlistIds,
+                        filmesAssistidosIds: dadosImportados.watchlist.filmesAssistidosIds,
                       },
                     },
-                    filmesWatchlistIds: resultado.dados.watchlist.filmesWatchlistIds,
-                    filmesAssistidosIds: resultado.dados.watchlist.filmesAssistidosIds,
+                    filmesWatchlistIds: dadosImportados.watchlist.filmesWatchlistIds,
+                    filmesAssistidosIds: dadosImportados.watchlist.filmesAssistidosIds,
                   }))
 
                   useFavoriteStore.setState((estadoAtual) => ({
                     favoritosPorUsuario: {
                       ...estadoAtual.favoritosPorUsuario,
-                      [usuarioKey]: resultado.dados.favoritos,
+                      [usuarioKey]: dadosImportados.favoritos,
                     },
-                    filmesFavoritosIds: resultado.dados.favoritos,
+                    filmesFavoritosIds: dadosImportados.favoritos,
                   }))
 
                   showSuccess(t('filmes.setlistPagina.dadosJson.importSucesso'))

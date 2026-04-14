@@ -1,6 +1,6 @@
-export type NivelCuradoriaSpoor = 'positivo' | 'atencao' | 'critico'
+export type NivelCuradoriaScore = 'positivo' | 'atencao' | 'critico'
 
-export interface FilmeSetlistAnaliseSpoor {
+export interface FilmeSetlistAnaliseScore {
   id: number
   titulo: string
   notaMedia: number
@@ -12,7 +12,7 @@ export interface FilmeSetlistAnaliseSpoor {
   emPopulares: boolean
 }
 
-export interface SetlistAnaliseSpoor {
+export interface SetlistAnaliseScore {
   totalFilmes: number
   mediaNotas: number
   mediaBudget: number
@@ -22,19 +22,19 @@ export interface SetlistAnaliseSpoor {
   percentualTrending: number
   percentualPopulares: number
   scoreCuradoria: number
-  nivelCuradoria: NivelCuradoriaSpoor
+  nivelCuradoria: NivelCuradoriaScore
   filmesAcimaNotaSete: number
   filmesBaixaPopularidade: number
-  filmes: FilmeSetlistAnaliseSpoor[]
+  filmes: FilmeSetlistAnaliseScore[]
 }
 
-export interface SetlistAnaliseSpoorCache {
+export interface SetlistAnaliseScoreCache {
   assinatura: string
   calculadoEm: number
-  analise: SetlistAnaliseSpoor
+  analise: SetlistAnaliseScore
 }
 
-export interface SetlistAnaliseSpoorCsv {
+export interface SetlistAnaliseScoreCsv {
   fileName: string
   content: string
 }

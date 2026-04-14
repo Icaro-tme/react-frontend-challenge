@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { createSetlistAnaliseSpoorCsv } from '../../../../features/setlist/model/setlist-analysis-export'
+import { createSetlistAnaliseScoreCsv } from '../../../../features/setlist/model/setlist-analysis-export'
 
 describe('setlist analysis export', () => {
   it('deve gerar csv com nome de arquivo normalizado e conteudo com resumo e filmes', () => {
-    const csv = createSetlistAnaliseSpoorCsv({
+    const csv = createSetlistAnaliseScoreCsv({
       nomeSetlist: 'Seleção Épica 2026',
       analise: {
         totalFilmes: 1,
@@ -34,7 +34,7 @@ describe('setlist analysis export', () => {
       },
     })
 
-    expect(csv.fileName).toBe('spoor-analise-selecao-epica-2026.csv')
+    expect(csv.fileName).toBe('score-analise-selecao-epica-2026.csv')
     expect(csv.content).toContain('campoResumo,valorResumo')
     expect(csv.content).toContain('scoreCuradoria,92')
     expect(csv.content).toContain('filmeId,titulo,notaMedia,popularidade,budget,anoLancamento,classificacaoIndicativa,emTendencia,emPopulares')

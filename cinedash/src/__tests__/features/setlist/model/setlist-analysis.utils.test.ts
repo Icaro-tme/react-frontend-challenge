@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   buildSetlistAnaliseAssinatura,
-  buildSetlistAnaliseSpoor,
+  buildSetlistAnaliseScore,
 } from '../../../../features/setlist/model/setlist-analysis.utils'
 
 describe('setlist analysis utils', () => {
@@ -13,8 +13,8 @@ describe('setlist analysis utils', () => {
     expect(assinaturaB).toBe('10|20|30')
   })
 
-  it('deve calcular indicadores principais da analise spoor', () => {
-    const analise = buildSetlistAnaliseSpoor({
+  it('deve calcular indicadores principais da analise score', () => {
+    const analise = buildSetlistAnaliseScore({
       detalhesFilmes: [
         {
           id: 1,

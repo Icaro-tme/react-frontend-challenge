@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { FaArrowTrendUp } from 'react-icons/fa6'
 import type { Movie } from '../../../entities/movie/model/types'
-import type { FilmeSetlistAnaliseSpoor } from '../model/setlist-analysis.types'
+import type { FilmeSetlistAnaliseScore } from '../model/setlist-analysis.types'
 
 interface AnalysisColumnLabels {
   nota: string
@@ -18,7 +18,7 @@ interface SetlistMovieListTableProps {
   genresHeaderLabel: string
   actionsHeaderLabel: string
   renderActions: (movie: Movie) => ReactNode
-  analysisData?: FilmeSetlistAnaliseSpoor[]
+  analysisData?: FilmeSetlistAnaliseScore[]
   analysisColumnLabels?: AnalysisColumnLabels
   formatBudget?: (valor: number) => string
 }

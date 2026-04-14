@@ -1,11 +1,11 @@
 import type {
-  SetlistAnaliseSpoor,
-  SetlistAnaliseSpoorCsv,
+  SetlistAnaliseScore,
+  SetlistAnaliseScoreCsv,
 } from './setlist-analysis.types'
 
-interface CreateSetlistAnaliseSpoorCsvInput {
+interface CreateSetlistAnaliseScoreCsvInput {
   nomeSetlist: string
-  analise: SetlistAnaliseSpoor
+  analise: SetlistAnaliseScore
 }
 
 function escapeCsvValue(valor: string | number): string {
@@ -28,10 +28,10 @@ function sanitizeFileName(nomeArquivo: string): string {
     .replace(/^-|-$/g, '')
 }
 
-export function createSetlistAnaliseSpoorCsv({
+export function createSetlistAnaliseScoreCsv({
   nomeSetlist,
   analise,
-}: CreateSetlistAnaliseSpoorCsvInput): SetlistAnaliseSpoorCsv {
+}: CreateSetlistAnaliseScoreCsvInput): SetlistAnaliseScoreCsv {
   const linhasResumo = [
     ['setlist', nomeSetlist],
     ['totalFilmes', analise.totalFilmes],
@@ -87,7 +87,7 @@ export function createSetlistAnaliseSpoorCsv({
   const nomeSetlistNormalizado = sanitizeFileName(nomeSetlist || 'setlist')
 
   return {
-    fileName: `spoor-analise-${nomeSetlistNormalizado}.csv`,
+    fileName: `score-analise-${nomeSetlistNormalizado}.csv`,
     content,
   }
 }

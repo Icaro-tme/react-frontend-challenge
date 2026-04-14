@@ -9,14 +9,14 @@ import {
 import type { Setlist } from '../../../entities/setlist/model/setlist.types'
 import type { RouteLanguage } from '../../../shared/config/language'
 import { getErrorMessage } from '../../../shared/lib/get-error-message'
-import { createSetlistAnaliseSpoorCsv } from '../model/setlist-analysis-export'
+import { createSetlistAnaliseScoreCsv } from '../model/setlist-analysis-export'
 import type {
-  SetlistAnaliseSpoorCache,
-  SetlistAnaliseSpoorCsv,
+  SetlistAnaliseScoreCache,
+  SetlistAnaliseScoreCsv,
 } from '../model/setlist-analysis.types'
 import {
   buildSetlistAnaliseAssinatura,
-  buildSetlistAnaliseSpoor,
+  buildSetlistAnaliseScore,
 } from '../model/setlist-analysis.utils'
 
 interface UseSetlistAnalysisInput {
@@ -41,11 +41,11 @@ function createAnaliseAtualCacheKey(
   setlistId: string,
   assinatura: string,
 ) {
-  return ['setlist', 'spoor-analise', routeLanguage, setlistId, assinatura] as const
+  return ['setlist', 'score-analise', routeLanguage, setlistId, assinatura] as const
 }
 
 function createAnaliseUltimaCacheKey(routeLanguage: RouteLanguage, setlistId: string) {
-  return ['setlist', 'spoor-analise-last', routeLanguage, setlistId] as const
+  return ['setlist', 'score-analise-last', routeLanguage, setlistId] as const
 }
 
 export function useSetlistAnalysis({
@@ -68,10 +68,10 @@ export function useSetlistAnalysis({
   const chaveAnaliseUltima = createAnaliseUltimaCacheKey(routeLanguage, setlistId)
 
   const cacheAnaliseAtual = setlistId
-    ? queryClient.getQueryData<SetlistAnaliseSpoorCache>(chaveAnaliseAtual)
+    ? queryClient.getQueryData<SetlistAnaliseScoreCache>(chaveAnaliseAtual)
     : undefined
   const cacheAnaliseUltima = setlistId
-    ? queryClient.getQueryData<SetlistAnaliseSpoorCache>(chaveAnaliseUltima)
+    ? queryClient.getQueryData<SetlistAnaliseScoreCache>(chaveAnaliseUltima)
     : undefined
 
   const analiseAtual = cacheAnaliseAtual?.analise ?? null
@@ -125,7 +125,7 @@ export function useSetlistAnalysis({
         }),
       )
 
-      const analise = buildSetlistAnaliseSpoor({
+      const analise = buildSetlistAnaliseScore({
         detalhesFilmes,
         classificacoesFilmes,
         idsTrending: respostaTrending.results.map((filmeAtual) => filmeAtual.id),
@@ -138,7 +138,7 @@ export function useSetlistAnalysis({
       }
     },
     onSuccess: ({ assinatura, analise }, entrada) => {
-      const cacheAnalise: SetlistAnaliseSpoorCache = {
+      const cacheAnalise: SetlistAnaliseScoreCache = {
         assinatura,
         analise,
         calculadoEm: Date.now(),
@@ -190,7 +190,7 @@ export function useSetlistAnalysis({
     })
   }
 
-  function createCsvExport(): SetlistAnaliseSpoorCsv | null {
+  function createCsvExport(): SetlistAnaliseScoreCsv | null {
     if (!setlistSelecionada) {
       return null
     }
@@ -201,7 +201,7 @@ export function useSetlistAnalysis({
       return null
     }
 
-    return createSetlistAnaliseSpoorCsv({
+    return createSetlistAnaliseScoreCsv({
       nomeSetlist: setlistSelecionada.name,
       analise: analiseParaExportar,
     })

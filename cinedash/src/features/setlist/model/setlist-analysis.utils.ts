@@ -3,11 +3,11 @@ import type {
   TmdbMovieReleaseDatesResponse,
 } from '../../../shared/api/tmdb'
 import type {
-  NivelCuradoriaSpoor,
-  SetlistAnaliseSpoor,
+  NivelCuradoriaScore,
+  SetlistAnaliseScore,
 } from './setlist-analysis.types'
 
-interface BuildSetlistAnaliseSpoorInput {
+interface BuildSetlistAnaliseScoreInput {
   detalhesFilmes: TmdbMovieDetailsResponse[]
   classificacoesFilmes: TmdbMovieReleaseDatesResponse[]
   idsTrending: number[]
@@ -148,7 +148,7 @@ function calcularScoreCuradoria(
   return roundTwo(score)
 }
 
-function resolverNivelCuradoria(scoreCuradoria: number): NivelCuradoriaSpoor {
+function resolverNivelCuradoria(scoreCuradoria: number): NivelCuradoriaScore {
   if (scoreCuradoria >= 75) {
     return 'positivo'
   }
@@ -166,12 +166,12 @@ export function buildSetlistAnaliseAssinatura(movieIds: number[]): string {
   return idsOrdenados.join('|')
 }
 
-export function buildSetlistAnaliseSpoor({
+export function buildSetlistAnaliseScore({
   detalhesFilmes,
   classificacoesFilmes,
   idsTrending,
   idsPopulares,
-}: BuildSetlistAnaliseSpoorInput): SetlistAnaliseSpoor {
+}: BuildSetlistAnaliseScoreInput): SetlistAnaliseScore {
   const classificacoesPorFilmeId = new Map(
     classificacoesFilmes.map((classificacaoAtual) => [classificacaoAtual.id, classificacaoAtual]),
   )

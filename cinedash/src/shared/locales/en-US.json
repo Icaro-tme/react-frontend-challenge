@@ -275,7 +275,7 @@
       "erroCarregarFilmes": "Could not load setlist movies.",
       "abrirModalWatchlist": "Manage watchlist",
       "analise": {
-        "titulo": "Setlist Spoor analysis",
+        "titulo": "Setlist Score analysis",
         "descricao": "Metrics to validate whether this setlist curation is strong enough for a streaming catalog.",
         "acoes": {
           "calcular": "Calculate analysis",
