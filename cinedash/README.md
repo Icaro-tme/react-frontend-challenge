@@ -25,27 +25,27 @@ Implementação do desafio **CineDash (filmes)** com foco em arquitetura modular
 - Toasts de feedback para operações principais.
 - Sincronização automática de idioma na rota e na camada de i18n.
 
-## Espaço para prints (preencher depois)
+## Prints da aplicação
 
 ### Tela de login
 
-![Placeholder - Tela de login](./docs/images/login.png)
+![Tela de login](./docs/images/login.png)
 
-### Dashboard de descoberta
+### Dashboard de filmes
 
-![Placeholder - Dashboard](./docs/images/dashboard.png)
+![Dashboard - modo claro](./docs/images/dashboard.png)
+
+### Dashboard de filmes em modo escuro
+
+![Dashboard - modo escuro](./docs/images/dashboard-dark.png)
 
 ### Setlist e análise
 
-![Placeholder - Setlist](./docs/images/setlist.png)
+![Setlist e análise](./docs/images/setlist.png)
 
 ### Watchlist
 
-![Placeholder - Watchlist](./docs/images/watchlist.png)
-
-### Detalhes do filme
-
-![Placeholder - Detalhes do filme](./docs/images/movie-details.png)
+![Watchlist](./docs/images/watchlist.png)
 
 ## Como executar
 
