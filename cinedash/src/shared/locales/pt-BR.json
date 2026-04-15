@@ -1,0 +1,368 @@
+{
+  "login": {
+    "seloAcesso": "Acesso de curadoria",
+    "titulo": "Entrar no CineDash",
+    "descricao": "Digite seu email para validar acesso local. Caso não exista usuário cadastrado, você será redirecionado.",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "voce@empresa.com",
+    "senhaRotulo": "Senha",
+    "senhaPlaceholder": "Digite sua senha",
+    "botaoEntrar": "Entrar",
+    "cadastrarUsuario": "Não possui login? Criar cadastro",
+    "statusEmail": {
+      "invalido": "Digite um email válido.",
+      "verificando": "Consultando autenticação...",
+      "encontrado": "Email encontrado.",
+      "naoEncontrado": "Email não encontrado. Você será redirecionado para cadastro."
+    },
+    "notificacoes": {
+      "loginSucesso": "Login realizado com sucesso.",
+      "redirecionandoCadastro": "Email não encontrado. Você será redirecionado para cadastro.",
+      "erroLogin": "Não foi possível concluir o login."
+    }
+  },
+  "cadastro": {
+    "seloAcesso": "Novo acesso",
+    "titulo": "Criar cadastro",
+    "descricao": "Cadastre email, nome e perfil para gerar sessão.",
+    "nomeRotulo": "Nome",
+    "nomePlaceholder": "Nome completo",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "voce@empresa.com",
+    "perfilRotulo": "Perfil",
+    "botaoCadastrar": "Cadastrar e entrar",
+    "voltarLogin": "Já tenho cadastro",
+    "erroEmailExistente": "Email já cadastrado. Use a tela de login.",
+    "notificacoes": {
+      "cadastroSucesso": "Cadastro realizado com sucesso.",
+      "erroCadastro": "Não foi possível concluir o cadastro."
+    }
+  },
+  "perfis": {
+    "administrador": "Administrador",
+    "operador": "Operador"
+  },
+  "painel": {
+    "titulo": "CineDash",
+    "descricao": "Gerencie listagens, setlists e watchlist em uma única área de trabalho.",
+    "navegacao": {
+      "rotulo": "Navegação principal",
+      "dashboard": "Dashboard",
+      "setlist": "Setlist",
+      "favoritos": "Favoritos",
+      "watchlist": "Watchlist"
+    }
+  },
+  "filmes": {
+    "analise": {
+      "badge": "Análise",
+      "titulo": "Análise de setlists",
+      "nenhumaSetlist": "Nenhuma setlist criada ainda.",
+      "selecionarSetlist": "Selecionar setlist",
+      "nenhumaSetlistSelecionada": "Nenhuma",
+      "qtdeFilmes": "Filmes",
+      "calculando": "Calculando...",
+      "recalcular": "Recalcular",
+      "calcular": "Calcular",
+      "metricas": {
+        "score": "Score",
+        "mediaNotas": "Média notas",
+        "mediaBudget": "Média budget",
+        "trending": "Trending %",
+        "populares": "Populares %",
+        "mediaAno": "Média ano"
+      }
+    },
+    "indicadores": {
+      "favoritado": "Favoritado",
+      "assistido": "Assistido",
+      "naSetlist": "Na setlist",
+      "maisSetlists": "+ {{count}} setlist(s)"
+    },
+    "tabelaAnalise": {
+      "nota": "Nota",
+      "popularidade": "Popularidade",
+      "budget": "Budget",
+      "ano": "Ano",
+      "trending": "Trending"
+    },
+    "analiseDashboard": {
+      "trending": "Trending",
+      "populares": "Populares",
+      "outros": "Outros",
+      "filmesNotaAlta": "com nota ≥ 7",
+      "filmesTotal": "filmes no total",
+      "perfilSetlist": "Perfil da setlist",
+      "distribuicao": "Distribuição",
+      "notasPorFilme": "Notas por filme",
+      "budgetPorFilme": "Budget por filme",
+      "radarNotas": "Notas",
+      "radarPopularidade": "Popularidade",
+      "radarTrending": "Trending",
+      "radarPopulares": "Populares",
+      "radarScore": "Score"
+    },
+    "listagem": {
+      "badge": "Listagem",
+      "titulo": "Listagem de filmes",
+      "descricao": "Use abas reais para alternar entre visões e aplique filtros aditivos por nome, gênero e período."
+    },
+    "filtros": {
+      "tituloBusca": "Buscar por nome",
+      "placeholderBusca": "Digite o nome do filme",
+      "tituloGenero": "Filtrar gêneros",
+      "placeholderGenero": "Digite para buscar gêneros",
+      "nenhumGeneroEncontrado": "Nenhum gênero encontrado para este termo.",
+      "generoIndisponivel": "Filtro de gênero indisponível no momento.",
+      "anoLancamento": "Ano de lançamento",
+      "tituloNotaMinima": "Nota mínima",
+      "placeholderNotaMinima": "Ex: 7.5",
+      "placeholderAno": "Ex: 2020",
+      "erroAnoInvalido": "Informe um ano válido entre 1800 e 2200.",
+      "erroNotaInvalida": "Informe uma nota válida entre 0 e 10.",
+      "tituloJanelaTendencia": "Janela da tendência",
+      "tendenciaDia": "Últimas 24h",
+      "tendenciaSemana": "Últimos 7 dias",
+      "tituloRegiao": "Região",
+      "regiaoTodos": "Todas as regiões",
+      "regiaoBrasil": "Brasil (BR)",
+      "regiaoEstadosUnidos": "Estados Unidos (US)",
+      "tituloOrdenacao": "Ordenação",
+      "ordenacaoPopularidadeDesc": "Popularidade (maior para menor)",
+      "ordenacaoPopularidadeAsc": "Popularidade (menor para maior)",
+      "ordenacaoDataDesc": "Lançamento (mais recente)",
+      "ordenacaoDataAsc": "Lançamento (mais antigo)",
+      "ordenacaoNotaDesc": "Nota (maior para menor)",
+      "ordenacaoNotaAsc": "Nota (menor para maior)",
+      "limparFiltros": "Limpar filtros"
+    },
+    "paginacao": {
+      "resumo": "Página {{paginaAtual}} de {{totalPaginas}} • {{totalResultados}} resultados",
+      "anterior": "Anterior",
+      "proxima": "Próxima"
+    },
+    "listaVazia": "Nenhum filme encontrado nesta visualização.",
+    "semImagem": "Sem imagem",
+    "abas": {
+      "tendencias": "Tendências da semana",
+      "populares": "Populares",
+      "bemAvaliados": "Bem avaliados",
+      "proximosLancamentos": "Próximos lançamentos",
+      "descoberta": "Descoberta",
+      "favoritos": "Favoritos",
+      "pesquisa": "Pesquisa"
+    },
+    "abasDescricao": {
+      "tendencias": "Filmes que estão em alta na semana atual na TMDB.",
+      "populares": "Filmes ordenados por popularidade global no catálogo da TMDB.",
+      "bemAvaliados": "Filmes com melhores avaliações globais na TMDB.",
+      "proximosLancamentos": "Filmes com lançamento previsto para as próximas janelas.",
+      "descoberta": "Descubra filmes usando busca por nome, gênero e ano de lançamento.",
+      "favoritos": "Curadoria pessoal: filmes que você marcou como favoritos localmente.",
+      "pesquisa": "Busque por nome e refine por ano e região quando necessário."
+    },
+    "acoes": {
+      "favoritar": "Favoritar",
+      "desfavoritar": "Desfavoritar",
+      "setlist": "Setlist",
+      "adicionarWatchlist": "Na watchlist",
+      "removerWatchlist": "Remover watchlist",
+      "marcarAssistido": "Marcar assistido",
+      "desmarcarAssistido": "Desmarcar assistido",
+      "verDetalhes": "Detalhes"
+    },
+    "feedback": {
+      "favoritoSucesso": "Filme favoritado com sucesso.",
+      "favoritoRemovidoSucesso": "Filme removido dos favoritos.",
+      "favoritoErro": "Não foi possível atualizar favorito.",
+      "setlistCriadaSucesso": "Setlist criada com sucesso.",
+      "setlistCriadaErro": "Não foi possível criar a setlist.",
+      "setlistAdicionadoSucesso": "Filme adicionado à setlist.",
+      "setlistAdicionadoErro": "Não foi possível adicionar o filme à setlist.",
+      "setlistRemovidoSucesso": "Filme removido da setlist.",
+      "setlistRemovidoErro": "Não foi possível remover o filme da setlist.",
+      "watchlistAdicionadoSucesso": "Filme adicionado à watchlist.",
+      "watchlistAdicionadoErro": "Não foi possível adicionar o filme à watchlist.",
+      "watchlistRemovidoSucesso": "Filme removido da watchlist.",
+      "watchlistRemovidoErro": "Não foi possível remover o filme da watchlist."
+    },
+    "modais": {
+      "colunas": {
+        "filme": "Filme",
+        "generos": "Gêneros",
+        "acoes": "Ações"
+      },
+      "setlist": {
+        "titulo": "Gerenciar setlist",
+        "filmeSelecionado": "Filme selecionado",
+        "nenhumFilmeSelecionado": "Nenhum filme selecionado",
+        "selecionar": "Selecionar setlist",
+        "salvarFilme": "Salvar filme na setlist",
+        "removerFilme": "Remover filme da setlist",
+        "novaSetlist": "Nova setlist",
+        "placeholderNovaSetlist": "Nome da setlist",
+        "criarSetlist": "Criar setlist",
+        "listaFilmes": "Filmes da setlist selecionada",
+        "listaVazia": "Essa setlist ainda não possui filmes mapeados.",
+        "removerLinha": "Remover"
+      },
+      "watchlist": {
+        "titulo": "Gerenciar watchlist",
+        "filmeSelecionado": "Filme selecionado",
+        "nenhumFilmeSelecionado": "Nenhum filme selecionado",
+        "adicionarFilme": "Adicionar na watchlist",
+        "removerFilme": "Remover da watchlist",
+        "listaVazia": "Sua watchlist está vazia.",
+        "removerLinha": "Remover",
+        "marcarAssistido": "Assistido"
+      }
+    },
+    "detalhes": {
+      "voltarPainel": "Voltar ao painel",
+      "elenco": "Elenco principal",
+      "trailer": "Trailer",
+      "naoEncontrado": "Filme não encontrado.",
+      "idInvalido": "ID de filme inválido."
+    },
+    "watchlist": {
+      "titulo": "Sua watchlist",
+      "descricao": "Acompanhe os filmes salvos para assistir e marque os itens concluídos.",
+      "filtros": {
+        "tituloBusca": "Buscar na watchlist",
+        "placeholderBusca": "Digite o nome do filme salvo",
+        "ordenacaoCampo": "Ordenar por",
+        "ordenacaoDirecao": "Direção",
+        "ordenacaoCampos": {
+          "titulo": "Título",
+          "genero": "Gênero",
+          "nota": "Nota"
+        },
+        "ordenacaoDirecoes": {
+          "asc": "Crescente",
+          "desc": "Decrescente"
+        },
+        "status": {
+          "todos": "Todos",
+          "assistidos": "Assistidos",
+          "pendentes": "Pendentes",
+          "favoritos": "Favoritos"
+        }
+      },
+      "colunas": {
+        "titulo": "Título",
+        "genero": "Gênero",
+        "dataLancamento": "Lançamento",
+        "nota": "Nota",
+        "acoes": "Ações"
+      }
+    },
+    "setlistPagina": {
+      "badge": "Setlist",
+      "titulo": "Gestão de setlist",
+      "descricao": "Troque entre setlists, adicione filmes por busca da TMDB e gerencie ações rápidas em cada item.",
+      "selecionarSetlist": "Selecionar setlist",
+      "abrirAcoes": "Abrir ações da setlist",
+      "fecharAcoes": "Fechar ações da setlist",
+      "adicionarFilmeBusca": "Adicionar filme por busca",
+      "placeholderBuscaFilme": "Digite o nome do filme para buscar na TMDB",
+      "dicaBusca": "Digite pelo menos 2 caracteres para carregar sugestões.",
+      "carregandoBusca": "Buscando filmes na TMDB...",
+      "nenhumResultadoBusca": "Nenhum filme encontrado para esse termo.",
+      "filmeSelecionado": "Filme selecionado",
+      "nenhumFilmeSelecionadoBusca": "Nenhum filme selecionado",
+      "confirmarAdicionarFilme": "Confirmar adição do filme",
+      "carregandoFilmes": "Carregando filmes da setlist...",
+      "erroCarregarFilmes": "Não foi possível carregar os filmes da setlist.",
+      "abrirModalWatchlist": "Gerenciar watchlist",
+      "analise": {
+        "titulo": "Análise Score da setlist",
+        "descricao": "Métricas para validar se a curadoria da setlist está competitiva para catálogo de streaming.",
+        "acoes": {
+          "calcular": "Calcular análise",
+          "recalcular": "Recalcular análise",
+          "calculando": "Calculando...",
+          "exportarExcel": "Exportar Excel (CSV)"
+        },
+        "status": {
+          "semSetlist": "Selecione uma setlist",
+          "semFilmes": "Setlist sem filmes",
+          "naoCalculada": "Análise pendente",
+          "desatualizada": "Análise desatualizada",
+          "atualizada": "Análise atualizada"
+        },
+        "hints": {
+          "semSetlist": "Selecione uma setlist para habilitar a análise.",
+          "semFilmes": "Adicione filmes na setlist para calcular os indicadores.",
+          "naoCalculada": "Clique em calcular para gerar o score e as médias da setlist.",
+          "desatualizada": "A setlist mudou desde a última análise. Recalcule para atualizar os dados.",
+          "atualizada": "A análise está atualizada com a versão atual da setlist."
+        },
+        "ultimaAtualizacao": "Última atualização",
+        "metricas": {
+          "scoreCuradoria": "Score de curadoria",
+          "mediaNotas": "Média de notas",
+          "mediaBudget": "Média de budget"
+        },
+        "niveis": {
+          "positivo": "Curadoria forte para negociação de catálogo.",
+          "atencao": "Curadoria mediana: vale revisar a mistura de títulos.",
+          "critico": "Curadoria fraca: muitos filmes fora de tração ou baixa relevância."
+        },
+        "insights": {
+          "resumo": "Resumo: {{totalFilmes}} filmes, {{filmesAcimaNotaSete}} com nota >= 7 e {{filmesBaixaPopularidade}} com popularidade baixa."
+        },
+        "feedback": {
+          "semAnalise": "Calcule a análise antes de exportar.",
+          "exportacaoSucesso": "Análise exportada com sucesso.",
+          "exportacaoSomenteAdmin": "A exportação da análise está disponível apenas para administrador."
+        }
+      },
+      "feedback": {
+        "selecioneSetlist": "Selecione uma setlist para continuar.",
+        "nomeSetlistObrigatorio": "Informe um nome válido para criar a setlist.",
+        "termoBuscaInvalido": "Digite pelo menos 2 caracteres para buscar um filme.",
+        "selecioneFilmeValido": "Selecione um filme válido antes de confirmar.",
+        "filmeJaNaSetlist": "Esse filme já está na setlist selecionada."
+      },
+      "dadosJson": {
+        "exportar": "Exportar JSON",
+        "importar": "Importar JSON",
+        "exportSucesso": "Dados exportados com sucesso.",
+        "exportErro": "Não foi possível exportar os dados.",
+        "importSucesso": "Dados importados com sucesso.",
+        "importErro": "Não foi possível ler o arquivo.",
+        "importFormatoInvalido": "Formato de arquivo inválido. Use um JSON exportado pelo CineDash."
+      }
+    }
+  },
+  "sessao": {
+    "verificandoSessao": "Verificando sessão",
+    "erroSemSessaoAtiva": "ERRO: VOCÊ NÃO EM SESSÃO ATIVA, LOGO, NÃO PODERÁ ACESSAR ESSA PÁGINA",
+    "irParaLogin": "Ir para login"
+  },
+  "autorizacao": {
+    "semPermissaoConteudo": "ATENÇÃO: VOCÊ NÃO POSSUI PERMISSÃO PARA ACESSAR ESTE CONTEÚDO"
+  },
+  "validacao": {
+    "emailInvalido": "Digite um email válido.",
+    "senhaMinima": "A senha precisa ter mais de 6 caracteres.",
+    "nomeMinimo": "Informe pelo menos 2 caracteres no nome."
+  },
+  "acoes": {
+    "sair": "Sair",
+    "fechar": "Fechar",
+    "erroGenerico": "Algo deu errado. Tente novamente."
+  },
+  "rodape": {
+    "assinatura": "@2026 By Icaro Araújo",
+    "contato": "Contato",
+    "idioma": "Idioma",
+    "trocarIdioma": "Trocar idioma",
+    "alternarTemaEscuro": "Ativar tema escuro",
+    "alternarTemaClaro": "Ativar tema claro"
+  },
+  "naoEncontrado": {
+    "titulo": "Página não encontrada",
+    "descricao": "Volte para uma rota válida de idioma para continuar."
+  }
+}

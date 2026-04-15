@@ -1,0 +1,368 @@
+{
+  "login": {
+    "seloAcesso": "Curation access",
+    "titulo": "Sign in to CineDash",
+    "descricao": "Type your email to validate local access. If no user exists, you will be sent to sign up.",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "you@company.com",
+    "senhaRotulo": "Password",
+    "senhaPlaceholder": "Type your password",
+    "botaoEntrar": "Sign in",
+    "cadastrarUsuario": "No account yet? Create one",
+    "statusEmail": {
+      "invalido": "Enter a valid email to start checking.",
+      "verificando": "Checking authentication...",
+      "encontrado": "Email found. You can sign in now.",
+      "naoEncontrado": "Email not found. On submit, you will be redirected to sign up."
+    },
+    "notificacoes": {
+      "loginSucesso": "Signed in successfully.",
+      "redirecionandoCadastro": "Email not found. You will be redirected to sign up.",
+      "erroLogin": "Could not complete sign in."
+    }
+  },
+  "cadastro": {
+    "seloAcesso": "New account",
+    "titulo": "Create account",
+    "descricao": "Register email, name and profile to generate a session.",
+    "nomeRotulo": "Name",
+    "nomePlaceholder": "Full name",
+    "emailRotulo": "Email",
+    "emailPlaceholder": "you@company.com",
+    "perfilRotulo": "Profile",
+    "botaoCadastrar": "Register and sign in",
+    "voltarLogin": "I already have an account",
+    "erroEmailExistente": "This email already exists. Please use login.",
+    "notificacoes": {
+      "cadastroSucesso": "Account created successfully.",
+      "erroCadastro": "Could not complete account creation."
+    }
+  },
+  "perfis": {
+    "administrador": "Administrator",
+    "operador": "Operator"
+  },
+  "painel": {
+    "titulo": "CineDash",
+    "descricao": "Manage listings, setlists and watchlist in a single workspace.",
+    "navegacao": {
+      "rotulo": "Main navigation",
+      "dashboard": "Dashboard",
+      "setlist": "Setlist",
+      "favoritos": "Favorites",
+      "watchlist": "Watchlist"
+    }
+  },
+  "filmes": {
+    "analise": {
+      "badge": "Analysis",
+      "titulo": "Setlist analysis",
+      "nenhumaSetlist": "No setlists created yet.",
+      "selecionarSetlist": "Select setlist",
+      "nenhumaSetlistSelecionada": "None",
+      "qtdeFilmes": "Movies",
+      "calculando": "Calculating...",
+      "recalcular": "Recalculate",
+      "calcular": "Calculate",
+      "metricas": {
+        "score": "Score",
+        "mediaNotas": "Avg rating",
+        "mediaBudget": "Avg budget",
+        "trending": "Trending %",
+        "populares": "Popular %",
+        "mediaAno": "Avg year"
+      }
+    },
+    "indicadores": {
+      "favoritado": "Favorited",
+      "assistido": "Watched",
+      "naSetlist": "In setlist",
+      "maisSetlists": "+ {{count}} setlist(s)"
+    },
+    "tabelaAnalise": {
+      "nota": "Rating",
+      "popularidade": "Popularity",
+      "budget": "Budget",
+      "ano": "Year",
+      "trending": "Trending"
+    },
+    "analiseDashboard": {
+      "trending": "Trending",
+      "populares": "Popular",
+      "outros": "Other",
+      "filmesNotaAlta": "rated ≥ 7",
+      "filmesTotal": "total movies",
+      "perfilSetlist": "Setlist profile",
+      "distribuicao": "Distribution",
+      "notasPorFilme": "Ratings per movie",
+      "budgetPorFilme": "Budget per movie",
+      "radarNotas": "Ratings",
+      "radarPopularidade": "Popularity",
+      "radarTrending": "Trending",
+      "radarPopulares": "Popular",
+      "radarScore": "Score"
+    },
+    "listagem": {
+      "badge": "Listing",
+      "titulo": "Movie listing",
+      "descricao": "Switch between real tabs and apply additive filters by title, genres and release period."
+    },
+    "filtros": {
+      "tituloBusca": "Search by title",
+      "placeholderBusca": "Type a movie title",
+      "tituloGenero": "Filter genres",
+      "placeholderGenero": "Type to search genres",
+      "nenhumGeneroEncontrado": "No genres found for this search.",
+      "generoIndisponivel": "Genre filter is currently unavailable.",
+      "anoLancamento": "Release year",
+      "tituloNotaMinima": "Minimum rating",
+      "placeholderNotaMinima": "Ex: 7.5",
+      "placeholderAno": "Ex: 2020",
+      "erroAnoInvalido": "Provide a valid year between 1800 and 2200.",
+      "erroNotaInvalida": "Provide a valid rating between 0 and 10.",
+      "tituloJanelaTendencia": "Trending window",
+      "tendenciaDia": "Last 24h",
+      "tendenciaSemana": "Last 7 days",
+      "tituloRegiao": "Region",
+      "regiaoTodos": "All regions",
+      "regiaoBrasil": "Brazil (BR)",
+      "regiaoEstadosUnidos": "United States (US)",
+      "tituloOrdenacao": "Sort by",
+      "ordenacaoPopularidadeDesc": "Popularity (high to low)",
+      "ordenacaoPopularidadeAsc": "Popularity (low to high)",
+      "ordenacaoDataDesc": "Release date (newest)",
+      "ordenacaoDataAsc": "Release date (oldest)",
+      "ordenacaoNotaDesc": "Rating (high to low)",
+      "ordenacaoNotaAsc": "Rating (low to high)",
+      "limparFiltros": "Reset filters"
+    },
+    "paginacao": {
+      "resumo": "Page {{paginaAtual}} of {{totalPaginas}} • {{totalResultados}} results",
+      "anterior": "Previous",
+      "proxima": "Next"
+    },
+    "listaVazia": "No movies found for this view.",
+    "semImagem": "No image",
+    "abas": {
+      "tendencias": "Weekly trending",
+      "populares": "Popular",
+      "bemAvaliados": "Top rated",
+      "proximosLancamentos": "Upcoming",
+      "descoberta": "Discover",
+      "favoritos": "Favorites",
+      "pesquisa": "Search"
+    },
+    "abasDescricao": {
+      "tendencias": "Movies currently trending during the week on TMDB.",
+      "populares": "Movies ordered by global popularity in TMDB's catalog.",
+      "bemAvaliados": "Movies with the best global ratings on TMDB.",
+      "proximosLancamentos": "Movies scheduled for release in upcoming windows.",
+      "descoberta": "Discover movies using title, genre and release-year filters.",
+      "favoritos": "Personal curation: movies you marked as favorites locally.",
+      "pesquisa": "Search by title and refine with year and region when needed."
+    },
+    "acoes": {
+      "favoritar": "Favorite",
+      "desfavoritar": "Unfavorite",
+      "setlist": "Setlist",
+      "adicionarWatchlist": "Watchlist",
+      "removerWatchlist": "Remove watchlist",
+      "marcarAssistido": "Mark watched",
+      "desmarcarAssistido": "Unmark watched",
+      "verDetalhes": "Details"
+    },
+    "feedback": {
+      "favoritoSucesso": "Movie added to favorites successfully.",
+      "favoritoRemovidoSucesso": "Movie removed from favorites.",
+      "favoritoErro": "Could not update favorite status.",
+      "setlistCriadaSucesso": "Setlist created successfully.",
+      "setlistCriadaErro": "Could not create setlist.",
+      "setlistAdicionadoSucesso": "Movie added to setlist.",
+      "setlistAdicionadoErro": "Could not add movie to setlist.",
+      "setlistRemovidoSucesso": "Movie removed from setlist.",
+      "setlistRemovidoErro": "Could not remove movie from setlist.",
+      "watchlistAdicionadoSucesso": "Movie added to watchlist.",
+      "watchlistAdicionadoErro": "Could not add movie to watchlist.",
+      "watchlistRemovidoSucesso": "Movie removed from watchlist.",
+      "watchlistRemovidoErro": "Could not remove movie from watchlist."
+    },
+    "modais": {
+      "colunas": {
+        "filme": "Movie",
+        "generos": "Genres",
+        "acoes": "Actions"
+      },
+      "setlist": {
+        "titulo": "Manage setlist",
+        "filmeSelecionado": "Selected movie",
+        "nenhumFilmeSelecionado": "No movie selected",
+        "selecionar": "Select setlist",
+        "salvarFilme": "Save movie to setlist",
+        "removerFilme": "Remove movie from setlist",
+        "novaSetlist": "New setlist",
+        "placeholderNovaSetlist": "Setlist name",
+        "criarSetlist": "Create setlist",
+        "listaFilmes": "Movies in selected setlist",
+        "listaVazia": "This setlist has no mapped movies yet.",
+        "removerLinha": "Remove"
+      },
+      "watchlist": {
+        "titulo": "Manage watchlist",
+        "filmeSelecionado": "Selected movie",
+        "nenhumFilmeSelecionado": "No movie selected",
+        "adicionarFilme": "Add to watchlist",
+        "removerFilme": "Remove from watchlist",
+        "listaVazia": "Your watchlist is empty.",
+        "removerLinha": "Remove",
+        "marcarAssistido": "Watched"
+      }
+    },
+    "detalhes": {
+      "voltarPainel": "Back to dashboard",
+      "elenco": "Main cast",
+      "trailer": "Trailer",
+      "naoEncontrado": "Movie not found.",
+      "idInvalido": "Invalid movie id."
+    },
+    "watchlist": {
+      "titulo": "Your watchlist",
+      "descricao": "Track saved movies to watch and mark completed items.",
+      "filtros": {
+        "tituloBusca": "Search in watchlist",
+        "placeholderBusca": "Type the saved movie title",
+        "ordenacaoCampo": "Sort by",
+        "ordenacaoDirecao": "Direction",
+        "ordenacaoCampos": {
+          "titulo": "Title",
+          "genero": "Genre",
+          "nota": "Rating"
+        },
+        "ordenacaoDirecoes": {
+          "asc": "Ascending",
+          "desc": "Descending"
+        },
+        "status": {
+          "todos": "All",
+          "assistidos": "Watched",
+          "pendentes": "Pending",
+          "favoritos": "Favorites"
+        }
+      },
+      "colunas": {
+        "titulo": "Title",
+        "genero": "Genre",
+        "dataLancamento": "Release date",
+        "nota": "Rating",
+        "acoes": "Actions"
+      }
+    },
+    "setlistPagina": {
+      "badge": "Setlist",
+      "titulo": "Setlist management",
+      "descricao": "Switch setlists, add movies with TMDB search, and control quick actions per row.",
+      "selecionarSetlist": "Select setlist",
+      "abrirAcoes": "Open setlist actions",
+      "fecharAcoes": "Close setlist actions",
+      "adicionarFilmeBusca": "Add movie by search",
+      "placeholderBuscaFilme": "Type a movie title to search on TMDB",
+      "dicaBusca": "Type at least 2 characters to load suggestions.",
+      "carregandoBusca": "Searching movies on TMDB...",
+      "nenhumResultadoBusca": "No movies found for this search.",
+      "filmeSelecionado": "Selected movie",
+      "nenhumFilmeSelecionadoBusca": "No movie selected",
+      "confirmarAdicionarFilme": "Confirm movie add",
+      "carregandoFilmes": "Loading setlist movies...",
+      "erroCarregarFilmes": "Could not load setlist movies.",
+      "abrirModalWatchlist": "Manage watchlist",
+      "analise": {
+        "titulo": "Setlist Score analysis",
+        "descricao": "Metrics to validate whether this setlist curation is strong enough for a streaming catalog.",
+        "acoes": {
+          "calcular": "Calculate analysis",
+          "recalcular": "Recalculate analysis",
+          "calculando": "Calculating...",
+          "exportarExcel": "Export Excel (CSV)"
+        },
+        "status": {
+          "semSetlist": "Select a setlist",
+          "semFilmes": "Setlist has no movies",
+          "naoCalculada": "Analysis pending",
+          "desatualizada": "Analysis outdated",
+          "atualizada": "Analysis updated"
+        },
+        "hints": {
+          "semSetlist": "Select a setlist to enable the analysis.",
+          "semFilmes": "Add movies to the setlist before calculating indicators.",
+          "naoCalculada": "Click calculate to generate the score and averages for this setlist.",
+          "desatualizada": "This setlist changed since the last run. Recalculate to refresh indicators.",
+          "atualizada": "Analysis is up to date with the current setlist version."
+        },
+        "ultimaAtualizacao": "Last update",
+        "metricas": {
+          "scoreCuradoria": "Curation score",
+          "mediaNotas": "Average rating",
+          "mediaBudget": "Average budget"
+        },
+        "niveis": {
+          "positivo": "Strong curation for catalog negotiation.",
+          "atencao": "Medium curation: worth revisiting your title mix.",
+          "critico": "Weak curation: too many low-traction or low-relevance titles."
+        },
+        "insights": {
+          "resumo": "Summary: {{totalFilmes}} movies, {{filmesAcimaNotaSete}} with rating >= 7 and {{filmesBaixaPopularidade}} with low popularity."
+        },
+        "feedback": {
+          "semAnalise": "Run analysis before exporting.",
+          "exportacaoSucesso": "Analysis exported successfully.",
+          "exportacaoSomenteAdmin": "Analysis export is available only for administrator users."
+        }
+      },
+      "feedback": {
+        "selecioneSetlist": "Select a setlist to continue.",
+        "nomeSetlistObrigatorio": "Enter a valid setlist name.",
+        "termoBuscaInvalido": "Type at least 2 characters to search a movie.",
+        "selecioneFilmeValido": "Select a valid movie before confirming.",
+        "filmeJaNaSetlist": "This movie is already in the selected setlist."
+      },
+      "dadosJson": {
+        "exportar": "Export JSON",
+        "importar": "Import JSON",
+        "exportSucesso": "Data exported successfully.",
+        "exportErro": "Could not export data.",
+        "importSucesso": "Data imported successfully.",
+        "importErro": "Could not read the file.",
+        "importFormatoInvalido": "Invalid file format. Use a JSON exported by CineDash."
+      }
+    }
+  },
+  "sessao": {
+    "verificandoSessao": "Checking session",
+    "erroSemSessaoAtiva": "ERROR: YOU DO NOT HAVE AN ACTIVE SESSION, SO YOU CANNOT ACCESS THIS PAGE",
+    "irParaLogin": "Go to login"
+  },
+  "autorizacao": {
+    "semPermissaoConteudo": "ATTENTION: YOU DO NOT HAVE PERMISSION TO ACCESS THIS CONTENT"
+  },
+  "validacao": {
+    "emailInvalido": "Enter a valid email.",
+    "senhaMinima": "Password must have more than 6 characters.",
+    "nomeMinimo": "Name must have at least 2 characters."
+  },
+  "acoes": {
+    "sair": "Logout",
+    "fechar": "Close",
+    "erroGenerico": "Something went wrong. Please try again."
+  },
+  "rodape": {
+    "assinatura": "@2026 By Icaro Araújo",
+    "contato": "Contact",
+    "idioma": "Language",
+    "trocarIdioma": "Switch language",
+    "alternarTemaEscuro": "Enable dark theme",
+    "alternarTemaClaro": "Enable light theme"
+  },
+  "naoEncontrado": {
+    "titulo": "Page not found",
+    "descricao": "Return to a valid language route to continue."
+  }
+}

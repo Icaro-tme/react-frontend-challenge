@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #f5f3ea;
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(250, 204, 21, 0.05) 0px,
+      rgba(250, 204, 21, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(250, 204, 21, 0.05) 11px,
+      rgba(250, 204, 21, 0.05) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(90deg,
+      rgba(14, 116, 144, 0.05) 0px,
+      rgba(14, 116, 144, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(14, 116, 144, 0.05) 11px,
+      rgba(14, 116, 144, 0.05) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(0deg,
+      rgba(250, 204, 21, 0.04) 0px,
+      rgba(250, 204, 21, 0.04) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(250, 204, 21, 0.04) 11px,
+      rgba(250, 204, 21, 0.04) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(135deg,
+      rgba(14, 116, 144, 0.05) 0px,
+      rgba(14, 116, 144, 0.05) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(14, 116, 144, 0.05) 11px,
+      rgba(14, 116, 144, 0.05) 12px,
+      transparent 12px,
+      transparent 32px),
+    linear-gradient(160deg, #f6f3e5 0%, #ddd9ec 56%, #d2e5ef 100%);
+  color: #1f2937;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body {
+  background-color: #020617;
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(20, 83, 45, 0.12) 0px,
+      rgba(20, 83, 45, 0.12) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(20, 83, 45, 0.12) 11px,
+      rgba(20, 83, 45, 0.12) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(90deg,
+      rgba(30, 64, 175, 0.12) 0px,
+      rgba(30, 64, 175, 0.12) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(30, 64, 175, 0.12) 11px,
+      rgba(30, 64, 175, 0.12) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(0deg,
+      rgba(20, 83, 45, 0.1) 0px,
+      rgba(20, 83, 45, 0.1) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(20, 83, 45, 0.1) 11px,
+      rgba(20, 83, 45, 0.1) 12px,
+      transparent 12px,
+      transparent 32px),
+    repeating-linear-gradient(135deg,
+      rgba(30, 64, 175, 0.1) 0px,
+      rgba(30, 64, 175, 0.1) 1px,
+      transparent 1px,
+      transparent 11px,
+      rgba(30, 64, 175, 0.1) 11px,
+      rgba(30, 64, 175, 0.1) 12px,
+      transparent 12px,
+      transparent 32px),
+    linear-gradient(150deg, #020617 0%, #111827 50%, #0f172a 100%);
+  color: #e2e8f0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Sora', sans-serif;
+}
+
+
+/* .teste {
+  background-image: 
+  repeating-linear-gradient(45deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  repeating-linear-gradient(90deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  repeating-linear-gradient(0deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  repeating-linear-gradient(135deg, hsla(64, 83%, 54%, 0.05) 0px, hsla(64, 83%, 54%, 0.05) 1px, transparent 1px, transparent 11px, hsla(64, 83%, 54%, 0.05) 11px, hsla(64, 83%, 54%, 0.05) 12px, transparent 12px, transparent 32px), 
+  linear-gradient(90deg, rgb(41, 27, 158), rgb(249, 77, 212));
+} */
